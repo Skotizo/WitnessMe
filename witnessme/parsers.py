@@ -45,7 +45,7 @@ class TargetGenerator(ContextDecorator):
             for host in self.expand_ip_cidr_or_range(self.target):
                 for port in self.ports:
                     for scheme in ["http", "https"]:
-                        yield f"{scheme}://{host}:{port}"
+                        yield f"{scheme}://{host}"
 
     def __exit__(self, *exc):
         pass
